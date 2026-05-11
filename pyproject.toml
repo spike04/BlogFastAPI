@@ -8,20 +8,6 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-packages = [
-    { include = "routers" },
-]
-py-modules = [
-    "main",
-    "auth",
-    "config",
-    "database",
-    "email_utils",
-    "image_utils",
-    "models",
-    "populate_db",
-    "schemas",
-]
 dependencies = [
     "aiosmtplib>=5.1.0",
     "aiosqlite>=0.22.1",
@@ -35,3 +21,19 @@ dependencies = [
     "pyjwt>=2.12.1",
     "sqlalchemy>=2.0.49",
 ]
+
+[tool.setuptools]
+py-modules = [
+    "main",
+    "auth",
+    "config",
+    "database",
+    "email_utils",
+    "image_utils",
+    "models",
+    "populate_db",
+    "schemas",
+]
+
+[tool.setuptools.packages.find]
+include = ["routers"]

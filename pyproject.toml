@@ -1,9 +1,27 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "fastapi-blog"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
+packages = [
+    { include = "routers" },
+]
+py-modules = [
+    "main",
+    "auth",
+    "config",
+    "database",
+    "email_utils",
+    "image_utils",
+    "models",
+    "populate_db",
+    "schemas",
+]
 dependencies = [
     "aiosmtplib>=5.1.0",
     "aiosqlite>=0.22.1",
